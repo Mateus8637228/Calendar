@@ -47,7 +47,7 @@ string getMonthName(int month) {
 // Вывод календаря на месяц
 void printMonthCalendar(int month, int year) {
   cout << endl;
-  cout << setw(20) << getMonthName(month) << " " << year << endl;
+  cout << setw(20) << getMonthName(month) << endl;
   cout << " Пн  Вт  Ср  Чт  Пт  Сб  Вс" << endl;
   
   int firstDay = getFirstDayOfMonth(month, year);
@@ -77,7 +77,7 @@ int main() {
   
   cout << endl;
   cout << "КАЛЕНДАРЬ НА " << selectedYear << " ГОД" << endl;
-  cout << "====================" << endl;
+  cout << "============================" << endl;
   
   // Вывод всех месяцев года
   for (int currentMonth = 1; currentMonth <= 12; currentMonth++) {
