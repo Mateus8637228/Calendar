@@ -54,12 +54,12 @@ void printMonthCalendar(int month, int year) {
   int daysInMonth = getDaysInMonth(month, year);
   
   // Пробелы перед первым днем
-  for (int spaceCounter = 0; spaceCounter < firstDay; spaceCounter++) {
+  for (int spaceCounter = 0; spaceCounter < firstDay; ++spaceCounter) {
     cout << "    ";
   }
   
   // Вывод дней месяца
-  for (int currentDay = 1; currentDay <= daysInMonth; currentDay++) {
+  for (int currentDay = 1; currentDay <= daysInMonth; ++currentDay) {
     cout << setw(3) << currentDay << " ";
     // Переход на новую строку в воскресенье
     if ((firstDay + currentDay) % 7 == 0) {
@@ -80,7 +80,7 @@ int main() {
   cout << "============================" << endl;
   
   // Вывод всех месяцев года
-  for (int currentMonth = 1; currentMonth <= 12; currentMonth++) {
+  for (int currentMonth = 1; currentMonth <= 12; ++currentMonth) {
     printMonthCalendar(currentMonth, selectedYear);
   }
   
